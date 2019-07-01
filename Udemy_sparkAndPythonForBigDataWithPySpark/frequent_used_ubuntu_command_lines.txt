@@ -1,0 +1,32 @@
+export SPARK_HOME=$HOME'/spark-2.1.0-bin-hadoop2.7'
+export PATH=$SPARK_HOME:$PATH
+export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+export PYSPARK__DRIVER_PYTHON="jupyter"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+export PYSPARK_PYTHON=python3
+
+
+######
+sudo chmod 777 spark-2.1.0-bin-hadoop2.7
+
+cd spark-2.1.0-bin-hadoop2.7
+
+sudo chmod 777 python
+
+cd python
+
+sudo chmod 777 pyspark
+#######
+
+import pyspark
+
+jupyter notebook
+
+
+cd spark-2.1.0-bin-hadoop2.7/python
+
+
+pip3 install findspark --user greg
+
+import findspark
+findspark.init('home/greg/spark-2.1.0-bin-hadoop2.7')
